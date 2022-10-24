@@ -1,8 +1,11 @@
 import express from 'express';
+import "reflect-metadata"
 import dotenv from 'dotenv';
 import { router } from './routes';
 
 import "./database/ormconfig";
+
+import "./shared/container";
 
 dotenv.config();
 
