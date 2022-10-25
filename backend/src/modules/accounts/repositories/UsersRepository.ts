@@ -32,7 +32,6 @@ class UsersRepository implements IUsersRepository {
     })
 
     await repository.save(user);
-    throw new Error()
   }
 }
 
