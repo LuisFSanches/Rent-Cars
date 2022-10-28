@@ -18,8 +18,7 @@ describe("Create Category", () => {
     await createCategoryUseCase.execute(category);
 
     const categoryCreated = await categoriesRepositoryInMemory.findByName(category.name);
-    console.log(categoryCreated)
-    expect(categoryCreated).toHaveProperty("id")
+    expect(categoryCreated).toHaveProperty("id");
   })
 
   it("Should not be able to create a new category with same name", async () => {
