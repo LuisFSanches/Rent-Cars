@@ -6,8 +6,8 @@ import { router } from './routes';
 
 import "./database/ormconfig";
 
-import "./shared/container";
-import { AppError } from './errors/AppError';
+import "@shared/container";
+import { AppError } from '@errors/AppError';
 
 dotenv.config();
 
