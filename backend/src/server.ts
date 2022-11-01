@@ -2,12 +2,12 @@ import express, { Request, Response, NextFunction } from 'express';
 import "express-async-errors";
 import "reflect-metadata"
 import dotenv from 'dotenv';
-import { router } from './routes';
+import { router } from './shared/infra/http/routes';
 
 import "./database/ormconfig";
 
 import "@shared/container";
-import { AppError } from '@errors/AppError';
+import { AppError } from '@shared/errors/AppError';
 
 dotenv.config();
 
