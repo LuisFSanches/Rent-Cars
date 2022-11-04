@@ -1,11 +1,11 @@
-import { Car } from "@modules/cars/infra/typeorm/entities/Cart";
+import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 import { AppError } from "@shared/errors/AppError";
 import { inject, injectable } from "tsyringe";
 
 interface IRequest {
   name: string;
-  decription: string;
+  description: string;
   daily_rate: number;
   license_plate: string;
   fine_amount: number;
@@ -21,7 +21,7 @@ class CreateCarUseCase {
   ) {}
   async execute({ 
     name, 
-    decription, 
+    description, 
     daily_rate, 
     license_plate, 
     fine_amount, 
@@ -37,7 +37,7 @@ class CreateCarUseCase {
 
     const car = await this.carsRepository.create({
       name, 
-      decription, 
+      description, 
       daily_rate, 
       license_plate, 
       fine_amount, 

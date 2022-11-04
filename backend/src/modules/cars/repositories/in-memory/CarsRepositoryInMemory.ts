@@ -10,7 +10,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
     brand, 
     category_id, 
     daily_rate, 
-    decription, 
+    description, 
     fine_amount, 
     name, 
     license_plate 
@@ -21,7 +21,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
       brand, 
       category_id, 
       daily_rate, 
-      decription, 
+      description, 
       fine_amount, 
       name, 
       license_plate 
