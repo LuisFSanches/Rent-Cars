@@ -3,6 +3,8 @@ import { ImportCategoryController } from '@modules/cars/useCases/importCategorie
 import { ListCategoriesController } from '@modules/cars/useCases/listCategory/ListCategoriesController';
 import { Router } from 'express';
 import multer from 'multer';
+import { ensureAdmin } from '../middlewares/ensureAdmin';
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 
 const categoriesRoutes = Router();
@@ -17,7 +19,7 @@ const importCategoryController = new ImportCategoryController();
 
 const listCategoriesController =  new ListCategoriesController();
 
-categoriesRoutes.post("/", createCategoryController.handle);
+categoriesRoutes.post("/", ensureAuthenticated, ensureAdmin, createCategoryController.handle);
 
 categoriesRoutes.get("/", listCategoriesController.handle);
 
